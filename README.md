@@ -23,6 +23,9 @@ CREATE TABLE public.statuses (
 ) WITH (
     OIDS = FALSE
 );
+INSERT INTO public.statuses(id,name) VALUES (1,"Завершено");
+INSERT INTO public.statuses(id,name) VALUES (2,"В процессе");
+INSERT INTO public.statuses(id,name) VALUES (3,"Ошибка");
 
 CREATE TABLE public."template" (
   id          serial NOT NULL,
