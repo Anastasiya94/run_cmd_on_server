@@ -3,13 +3,13 @@
 
 Подготовка сервера (подразумевается наличие node.js и npm):
 ```cmd
-nmp install body-parser
-nmp install encoding
-nmp install express
-nmp install htmlspecialchars
-nmp install pg-promise
-nmp install striptags
-nmp install unescape
+npm install body-parser
+npm install encoding
+npm install express
+npm install htmlspecialchars
+npm install pg-promise
+npm install striptags
+npm install unescape
 ```
 
 Программа имеет возможность хранить историю всех ранее выполненых команд в БД PostgreSQL. Если вы хотите хранить историю и у вас на сервере установлена СУБД PostrgeSQL, вам необходимо создать две таблицы используя следующие скрипты:
