@@ -1,0 +1,66 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Приложение для запуска утилит</title>
+  
+<link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css" />
+<link rel="stylesheet" href="./jqwidgets/styles/jqx.base.css" type="text/css" />
+<link rel="stylesheet" href="./css/main.css" />
+<link rel="stylesheet" href="./jqwidgets/styles/jqx.bootstrap.css" type="text/css" />
+<script src="./jquery/jquery.min.js"></script>
+<script src="./bootstrap/js/bootstrap.min.js"></script>
+<script src="./bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="./jqwidgets/jqxcore.js"></script>
+<script type="text/javascript" src="./jqwidgets/jqxbuttons.js"></script>
+<script type="text/javascript" src="./jqwidgets/jqxscrollbar.js"></script>
+<script type="text/javascript" src="./jqwidgets/jqxlistbox.js"></script>
+<script type="text/javascript" src="./jqwidgets/jqxdropdownlist.js"></script>  
+<script type="text/javascript" src="./jqwidgets/jqxmenu.js"></script>
+<script type="text/javascript" src="./jqwidgets/jqxgrid.js"></script>
+<script type="text/javascript" src="./jqwidgets/jqxgrid.selection.js"></script> 
+<script type="text/javascript" src="./jqwidgets/jqxgrid.columnsresize.js"></script> 
+<script type="text/javascript" src="./jqwidgets/jqxtabs.js"></script>
+<script type="text/javascript" src="./jqwidgets/jqxgrid.sort.js"></script> 
+<script type="text/javascript" src="./jqwidgets/jqxgrid.pager.js"></script> 
+<script type="text/javascript" src="./jqwidgets/jqxdata.js"></script> 
+<script type="text/javascript" src="./jqwidgets/jqxpanel.js"></script>
+<script type="text/javascript" src="./jqwidgets/globalization/globalize.js"></script>
+<script type="text/javascript" src="./jqwidgets/globalization/localization.js"></script>
+<script type="text/javascript" src="./jquery/notify.js"></script>
+</head>
+<body>
+<ul class="nav nav-tabs" role="tablist">
+  <li role="presentation"  class="active" ><a href="#run" aria-controls="run" role="tab" data-toggle="tab">Запуск утилит</a></li>
+  <li role="presentation"><a href="#result" aria-controls="result" role="tab" data-toggle="tab">Просмотр результатов</a></li>
+</ul>
+<div class="tab-content">
+    <div role="tabpanel" class="tab-pane fade in active" id="run">
+       <div id="notifies" style="width:50%;"  class="center-block"></div> 
+       <div style="height:80%; width:50%; margin-top: 10px;" class="center-block">
+         <form  method="POST" id="play_utility_form" action="javascript:void(null);" onsubmit="play()" class="form-horizontal">
+            <div class="form-group">
+                 <label for="command_text" class="col-sm-2 control-label">Команда</label>
+                 <div class="col-sm-10">
+                    <input type="text" placeholder="Введите команду" id="command_text" name="command_text" class="form-control" required />
+                 </div>
+            </div>
+            <div class="form-group">
+                <label for="comment_text" class="col-sm-2 control-label">Комментарий</label>
+                 <div class="col-sm-10">
+                   <textarea type="text" placeholder="Введите комментарий" id="comment_text" name="comment_text" rows="3" class="form-control"></textarea>
+                 </div>
+            </div>
+            <button class="btn btn-success" type="submit" style="padding-bottom: 10px; padding-top: 9px; float:right;">Выполнить</button>   
+        </form>
+      </div>
+  </div>
+  <div role="tabpanel" class="tab-pane fade" id="result">
+      <div style="height:80%; width:80%; margin-top: 10px;" class="center-block">
+          <div id="result_place">
+        </div>
+      </div>
+  </div>  
+</div>
+ <script type="text/javascript" src="./scripts/script.js"></script>
+</body>
+</html>
